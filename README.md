@@ -17,6 +17,30 @@ The examples in this repository require a valid implementation of OpenCL in your
  - AMD: `sudo apt-get install amd-opencl-dev`
  - Nvidia: `sudo apt-get install nvidia-opencl-dev`
 
+### xy tests
+
+- intel_sdk_for_opencl_applications_2020.3.494.tar.gz
+
+```
+Coffee Lake 8th Gen CPU ok
+Tiger Lake 11th Gen CPU failed
+```
+
+- intel compute-runtime
+
+```
+Coffee Lake 8th Gen CPU/GPU ok
+Tiger Lake 11th Gen CPU/GPU ok
+
+wget https://github.com/intel/compute-runtime/releases/download/21.37.20939/intel-gmmlib_21.2.1_amd64.deb && \
+    wget https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.8517/intel-igc-opencl_1.0.8517_amd64.deb && \
+    wget https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.8517/intel-igc-core_1.0.8517_amd64.deb && \
+    wget https://github.com/intel/compute-runtime/releases/download/21.37.20939/intel-opencl_21.37.20939_amd64.deb && \
+    wget https://github.com/intel/compute-runtime/releases/download/21.37.20939/intel-ocloc_21.37.20939_amd64.deb && \
+    wget https://github.com/intel/compute-runtime/releases/download/21.37.20939/intel-level-zero-gpu_1.2.20939_amd64.deb && \
+    wget https://github.com/intel/compute-runtime/releases/download/21.37.20939/ww37.sum && \
+    sha256sum -c ww37.sum
+```    
 ### Windows
 
 The following instructions must be performed to install OpenCL on a Windows/OSX device:
